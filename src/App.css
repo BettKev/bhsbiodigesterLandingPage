@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column; /* Change to column for mobile-first */
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-image {
+  max-width: 200px; /* Adjust the width as needed */
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.problem, .solution, .how-it-works {
+  margin-bottom: 40px;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Change to row for larger screens */
+  }
+  .hero-text {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
