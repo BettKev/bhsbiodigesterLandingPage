@@ -1,8 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import prototype from './assets/prototype.jpg';
+import prototype2 from './assets/prototype2.jpg';
+import prototype3 from './assets/prototype3.jpg';
+import prototype4 from './assets/prototype4.jpg';
+import prototype5 from './assets/prototype5.jpg';
+import prototype6 from './assets/prototype6.jpg';
+import prototype7 from './assets/prototype7.jpg';
+import prototype8 from './assets/prototype8.jpg';
+import prototype9 from './assets/prototype9.jpg';
+import prototype10 from './assets/prototype10.jpg';
+import prototype11 from './assets/prototype11.jpg';
+import prototype12 from './assets/prototype12.jpg';
 import './App.css';
 
+const images = [
+  prototype,
+  prototype2,
+  prototype3,
+  prototype4,
+  prototype5,
+  prototype6,
+  prototype7,
+  prototype8,
+  prototype9,
+  prototype10,
+  prototype11,
+  prototype12
+];
+
 function App() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Automatically cycle through images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App">
       <header>
@@ -11,15 +47,30 @@ function App() {
       </header>
 
       <section className="hero">
-        <div className="hero-image">
-          <img src={prototype} alt="prototype" className="hero-image" />
+        {/* Carousel Container */}
+        <div className="hero-carousel">
+          <img src={images[currentIndex]} alt={`prototype ${currentIndex + 1}`} className="carousel-image" />
         </div>
+
+        <div className="hero-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/zLIlnfAQSxk"
+            title="Birir Home Supplies Biogas Digester Prototype"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
         <div className="hero-text">
           <h2>Transforming Waste into Wealth: Sustainable Energy for Every Home</h2>
           <p>Power your home with renewable energy from a biogas digester made from recycled materials.</p>
         </div>
       </section>
 
+      {/* Remaining sections (problem, solution, how-it-works) */}
       <section className="problem">
         <h3>Problem We're Solving</h3>
         <ul>
