@@ -85,7 +85,7 @@ function App() {
             Many energy solutions today contribute to environmental harm. Our biogas solution transforms waste into sustainable energy, reducing reliance on fossil fuels and contributing to a cleaner environment.
           </li>
         </ul>
-        <button>Get Started</button>
+        <button>Buy Now</button>
       </section>
 
       <section className="solution">
