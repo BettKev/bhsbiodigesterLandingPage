@@ -51,8 +51,9 @@ function App() {
         <div className="hero-carousel">
           <img src={images[currentIndex]} alt={`prototype ${currentIndex + 1}`} className="carousel-image" />
         </div>
-
+          
         <div className="hero-video">
+          <p>First prototype made from recycled Air bed</p>
           <iframe
             width="560"
             height="315"
