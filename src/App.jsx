@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import prototype from './assets/prototype.jpg';
+import prototype from './assets/prototype.jpg';
 import prototype2 from './assets/prototype2.jpg';
 import prototype3 from './assets/prototype3.jpg';
 import prototype4 from './assets/prototype4.jpg';
@@ -14,7 +14,7 @@ import prototype12 from './assets/prototype12.jpg';
 import './App.css';
 
 const images = [
-  // prototype,
+  prototype,
   prototype2,
   prototype3,
   prototype4,
