@@ -52,8 +52,13 @@ function App() {
           <img src={images[currentIndex]} alt={`prototype ${currentIndex + 1}`} className="carousel-image" />
         </div>
           
+        <div className="hero-text">
+          <h2>Transforming Waste into Wealth: Sustainable Energy for Every Home</h2>
+          <p>Power your home with renewable energy from a biogas digester made from recycled materials.</p>
+        </div>
+
         <div className="hero-video">
-          <p>First prototype made from recycled Air bed</p>
+          <p>First prototype made in 2023 from recycled Air bed</p>
           <iframe
             width="560"
             height="315"
@@ -64,15 +69,11 @@ function App() {
             allowFullScreen
           ></iframe>
         </div>
-
-        <div className="hero-text">
-          <h2>Transforming Waste into Wealth: Sustainable Energy for Every Home</h2>
-          <p>Power your home with renewable energy from a biogas digester made from recycled materials.</p>
-        </div>
       </section>
 
       {/* Remaining sections (problem, solution, how-it-works) */}
       <section className="problem">
+      <button>Buy Now</button>
         <h3>Problem We're Solving</h3>
         <ul>
           <li>
@@ -85,7 +86,7 @@ function App() {
             Many energy solutions today contribute to environmental harm. Our biogas solution transforms waste into sustainable energy, reducing reliance on fossil fuels and contributing to a cleaner environment.
           </li>
         </ul>
-        <button>Buy Now</button>
+        
       </section>
 
       <section className="solution">
