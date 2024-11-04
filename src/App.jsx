@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 1000); // Change image every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
