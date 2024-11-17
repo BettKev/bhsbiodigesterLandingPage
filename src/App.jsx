@@ -25,110 +25,128 @@ const images = [
   prototype9,
   prototype10,
   prototype11,
-  prototype12
+  prototype12,
 ];
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Automatically cycle through images
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1000); // Change image every 3 seconds
+    }, 3000); // Change image every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="App">
-      <header>
-        <h1>Birir Home Supplies</h1>
-        <h2>Eco-friendly bio-digesters</h2>
+    <div className="container">
+      {/* Header */}
+      <header className="text-center py-4">
+        <h1 className="display-4">Birir Home Supplies</h1>
+        <p className="lead">Eco-friendly Biogas Digesters</p>
       </header>
 
-      <section className="hero">
-        {/* Carousel Container */}
-        <div className="hero-carousel">
-          <img src={images[currentIndex]} alt={`prototype ${currentIndex + 1}`} className="carousel-image" />
+      {/* Hero Section */}
+      <section className="row align-items-center my-5">
+        <div className="col-md-6 text-center mb-4">
+          <div className="hero-carousel">
+            <img
+              src={images[currentIndex]}
+              alt={`Prototype ${currentIndex + 1}`}
+              className="img-fluid rounded shadow"
+            />
+          </div>
         </div>
-          
-        <div className="hero-text">
-          <h2>Transforming Waste into Wealth: Sustainable Energy for Every Home</h2>
-          <p>Power your home with renewable energy from a biogas digester made from recycled materials.</p>
+        <div className="col-md-6">
+          <h2>Transforming Waste into Wealth</h2>
+          <p>
+            Power your home with renewable energy from a biogas digester made from recycled materials.
+          </p>
         </div>
+      </section>
 
-        <div className="hero-video">
-          <p>First prototype made in 2023 from recycled Air bed</p>
+      {/* Video Section */}
+      <section className="text-center my-5">
+        <p>First prototype made in 2023 from recycled Air bed:</p>
+        <div className="ratio ratio-16x9">
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/zLIlnfAQSxk"
             title="Birir Home Supplies Biogas Digester Prototype"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
       </section>
 
-      {/* Remaining sections (problem, solution, how-it-works) */}
-      <section className="problem">
-      <button>Buy Now</button>
-        <h3>Problem We're Solving</h3>
-        <ul>
-          <li>
-            Many communities struggle with effective waste disposal, leading to environmental pollution and health hazards. Organic waste often goes unused, piling up and contributing to greenhouse gas emissions.
+      {/* Problem Section */}
+      <section className="my-5">
+        <h3 className="text-center mb-4">Problem We're Solving</h3>
+        <ul className="list-group">
+          <li className="list-group-item">
+            Many communities struggle with effective waste disposal, leading to pollution and health hazards.
           </li>
-          <li>
-            Conventional energy sources are expensive and inaccessible to many rural or under-resourced communities, leaving people dependent on costly or unreliable fuel sources.
+          <li className="list-group-item">
+            Energy sources are expensive and inaccessible in many rural areas.
           </li>
-          <li>
-            Many energy solutions today contribute to environmental harm. Our biogas solution transforms waste into sustainable energy, reducing reliance on fossil fuels and contributing to a cleaner environment.
-          </li>
-        </ul>
-        
-      </section>
-
-      <section className="solution">
-        <h2>Our Solution: Sustainable, Affordable Biogas</h2>
-        <h3>Feature Highlights:</h3>
-        <ul>
-          <li>
-            <strong>Eco-friendly:</strong> Built using recycled materials, these digesters offer a cost-effective and sustainable alternative to traditional energy sources.
-          </li>
-          <li>
-            <strong>Affordable for All:</strong> Our materials and technology choices help keep costs low, making it accessible for households of all income levels.
-          </li>
-          <li>
-            <strong>Reduce Organic Waste:</strong> Use household organic waste to generate clean energy, transforming waste into a resource.
-          </li>
-          <li>
-            <strong>Cleaner Cooking and Heating:</strong> Our biogas solution produces a smokeless, odorless fuel ideal for cooking and heating, enhancing indoor air quality.
-          </li>
-          <li>
-            <strong>Earn Carbon Credits:</strong> Households that use our biogas solution can participate in carbon credit programs, creating a financial incentive for sustainable energy use.
-          </li>
-          <li>
-            <strong>Support Global Emission Goals:</strong> Each biogas unit contributes to carbon reduction, making a real impact on the environment.
-          </li>
-          <li>
-            <strong>Self-Sustaining:</strong> No need to rely on external energy sources – turn everyday waste into a reliable source of energy.
-          </li>
-          <li>
-            <strong>Empowerment for Rural Communities:</strong> Birir Home Supplies gives people energy independence while reducing energy costs.
+          <li className="list-group-item">
+            Existing energy solutions often harm the environment.
           </li>
         </ul>
       </section>
 
-      <section className="how-it-works">
-        <h2>How It Works</h2>
-        <ol>
-          <li><strong>Install the Biogas Digester:</strong> Set up an affordable unit at home with our easy-to-follow installation guide.</li>
-          <li><strong>Add Organic Waste:</strong> Food scraps, animal waste, and other organic matter are fed into the digester.</li>
-          <li><strong>Generate Clean Energy:</strong> As the waste breaks down, it produces biogas, which can be used for cooking, heating, and other household needs.</li>
-          <li><strong>Earn Carbon Credits:</strong> Track and redeem carbon credits through our program, turning sustainable actions into financial rewards.</li>
+      {/* Solution Section */}
+      <section className="my-5">
+        <h2 className="text-center mb-4">Our Solution</h2>
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="card shadow">
+              <div className="card-body">
+                <h5 className="card-title">Eco-friendly</h5>
+                <p className="card-text">
+                  Built using recycled materials, offering a sustainable energy alternative.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow">
+              <div className="card-body">
+                <h5 className="card-title">Affordable</h5>
+                <p className="card-text">
+                  Accessible for households of all income levels with low-cost materials.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card shadow">
+              <div className="card-body">
+                <h5 className="card-title">Reduce Organic Waste</h5>
+                <p className="card-text">
+                  Use household waste to generate clean energy, turning waste into a resource.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="my-5">
+        <h2 className="text-center mb-4">How It Works</h2>
+        <ol className="list-group list-group-numbered">
+          <li className="list-group-item">Install the biogas digester at home.</li>
+          <li className="list-group-item">Add organic waste to the digester.</li>
+          <li className="list-group-item">
+            Generate clean energy for cooking, heating, and household needs.
+          </li>
+          <li className="list-group-item">
+            Earn carbon credits through our program.
+          </li>
         </ol>
-        <button>Contact Us</button>
+        <div className="text-center mt-4">
+          <button className="btn btn-primary">Contact Us</button>
+        </div>
       </section>
     </div>
   );
