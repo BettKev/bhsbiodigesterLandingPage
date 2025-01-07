@@ -123,7 +123,7 @@ function App() {
             <strong>Earn Carbon Credits:</strong> Track and redeem carbon credits, turning sustainable actions into rewards.
           </li>
         </ol>
-        <button className="btn btn-info">Contact Us</button>
+        <button className="btn btn-info"><a href='https://docs.google.com/forms/d/e/1FAIpQLSd-rhvHXavyXyFFGbBTTSgRKw7jLmUJtWKw0g24oF2mgHrIQA/viewform?usp=sharing' style={{color: 'white'}}>Client Feedback form</a></button>
       </section>
     </div>
   );
